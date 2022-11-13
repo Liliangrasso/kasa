@@ -1,15 +1,19 @@
+/* Import */
+
 import {Routes, Route} from "react-router-dom"
 
 /* Pages */
+
 import Home from './Home/Home';
 import About from './About/index';
 import Rentals from './Rentals/index';
 import Error from './Error/index'
 
 /* Components */
+
 import Navbar from '../components/Navbar/index';
-//import Footer from '../components/Footer/index'
-//<Footer />
+import Footer from '../components/Footer/index'
+
 
 function App() {
   return (
@@ -21,6 +25,7 @@ function App() {
         <Route path="/about" element={<About/>} />
         <Route path="/*" element={<Error/>} />
       </Routes>
+      <Footer />
     </div>
   );
 }

@@ -1,9 +1,13 @@
 
+/* Import */
+
 import React from "react";
 import {Link} from "react-router-dom"
 import {ReactComponent as Logo} from '../../logo.svg'
 import styled from 'styled-components'
-import '../../styles/Navbar/styles.css'
+import colors from "../../utils/colors/color";
+
+/* Styles */
 
 const HeaderContainer = styled.header`
     padding: 20px;
@@ -12,7 +16,7 @@ const HeaderContainer = styled.header`
 `
 const StyledLink = styled(Link)`
     padding: 10px;
-    color: #FF6060;
+    color: ${colors.primary};
     text-decoration: none;
     font-size: 18px;
     @media (min-width: 450px){
@@ -28,7 +32,7 @@ const NavContainer = styled.nav`
 function Navbar(){
     return (
         <HeaderContainer>
-            <Logo className="logo" />
+            <Logo className="logoNav" />
             <NavContainer>
                 <StyledLink to="/">Home</StyledLink>
                 <StyledLink to="/about">About</StyledLink>

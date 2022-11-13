@@ -6,3 +6,27 @@ html, body, #root{
     flex-direction: column;
     font-family: 'Montserrat', sans-serif;
 }
+body{
+    margin: 0;
+}
+
+/* NavBar */
+
+/*Deskop*/
+@media (max-width: 450px) {
+    .logoNav{
+        max-width: 100px;
+    }
+ }
+ 
+/*Mobile*/
+@media (max-device-width: 375px) {
+    .logoNav{
+        max-width: 130px;
+    }
+ }
+
+ /* Footer */
+.logoFooter{
+    height: 40px;
+}
