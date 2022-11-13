@@ -15,7 +15,7 @@ body{
 /*Deskop*/
 @media (max-width: 450px) {
     .logoNav{
-        max-width: 100px;
+        max-width: 160px;
     }
  }
  
@@ -27,6 +27,7 @@ body{
  }
 
  /* Footer */
+ 
 .logoFooter{
     height: 40px;
 }

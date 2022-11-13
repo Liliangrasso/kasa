@@ -18,7 +18,7 @@ const StyledLink = styled(Link)`
     padding: 10px;
     color: ${colors.primary};
     text-decoration: none;
-    font-size: 18px;
+    font-size: 19px;
     @media (min-width: 450px){
         font-size: 20px; 
     }
