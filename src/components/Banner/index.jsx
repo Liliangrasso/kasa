@@ -12,6 +12,7 @@ const BannerContainer = styled.aside`
     justify-content: center;
     @media (min-width: 992px){
         height: 220px;
+        margin: 40px;
     }
 
 `
@@ -20,23 +21,31 @@ const BannerWrapper = styled.div`
     justify-content: center;
     height: 100%;
     width: 90%;
-    border-radius: 25px
 `
 const BannerTitle = styled.h1`
+    position: absolute;
     align-self: center;
+    margin: 25px;
+    overflow: hidden;
     color: ${colors.secondary};
-    margin: 15px;
     @media (min-width: 992px){
         font-size: 42px;
     }
 `
+const Cover = styled.img`
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 25px    
+`
 
-function Banner (){
+function Banner ({title, cover}){
 
     return (
         <BannerContainer>
-            <BannerWrapper className="bannerWrapper">
-                <BannerTitle>Chez vous, partout et ailleurs</BannerTitle>
+            <BannerWrapper>
+                <Cover src={cover} alt="Fond" />
+                <BannerTitle>{title}</BannerTitle>
             </BannerWrapper>
         </BannerContainer>
     )
