@@ -6,16 +6,15 @@ import About from './About/index';
 import Rentals from './Rentals/index';
 import Error from './Error/index'
 
-/* Components 
-import Navbar from '../components/Banner';
-import Footer from '../components/Footer/index'
-<Navbar />
-<Footer />
-*/
+/* Components */
+import Navbar from '../components/Navbar/index';
+//import Footer from '../components/Footer/index'
+//<Footer />
+
 function App() {
   return (
     <div className="App">
-      
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/rentals/:id" element={<Rentals/>} />
