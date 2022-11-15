@@ -56,6 +56,9 @@ function Banner ({title, cover}){
         </BannerContainer>
     )
 }
+
+/* Sécurisation des Props */
+
 Banner.propTypes = {
     title: PropTypes.string,
     cover: PropTypes.string.isRequired,

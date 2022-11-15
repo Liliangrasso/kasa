@@ -50,6 +50,8 @@ function Card({cover, title}){
     )
 }
 
+/* Sécurisation des Props */
+
 Card.propTypes = {
     title: PropTypes.string.isRequired,
     cover: PropTypes.string,
