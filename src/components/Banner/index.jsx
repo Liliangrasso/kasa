@@ -2,17 +2,22 @@
 
 import styled from "styled-components";
 import colors from "../../utils/colors/color";
-import '../../styles/Banner/styles.css'
 
 /* Styles */
 
 const BannerContainer = styled.aside`
     height: 120px;
-    display: flex;
-    justify-content: center;
-    @media (min-width: 992px){
+    max-width: 91%;
+    margin: 1% auto;
+    @media (min-width: 768px){
         height: 220px;
-        margin: 40px;
+    }
+    @media (min-width: 912px){
+        margin: 2% auto;
+    }
+    @media (min-width: 1400px){
+        height: 300px;
+        width: 90%;
     }
 
 `
@@ -20,7 +25,7 @@ const BannerWrapper = styled.div`
     display: flex;
     justify-content: center;
     height: 100%;
-    width: 90%;
+    width: 100%;
 `
 const BannerTitle = styled.h1`
     position: absolute;
