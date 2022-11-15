@@ -1,5 +1,6 @@
 /* Import */
 import styled from "styled-components";
+import PropTypes from 'prop-types';
 
 /* Styles */
 
@@ -48,5 +49,13 @@ function Card({cover, title}){
         </CardItem>
     )
 }
+
+Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    cover: PropTypes.string,
+}
+Card.defaultProps = {
+        title: 'Mon titre par défaut',
+    }
 
 export default Card;

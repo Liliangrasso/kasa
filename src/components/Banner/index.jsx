@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import colors from "../../utils/colors/color";
+import PropTypes from 'prop-types';
 
 /* Styles */
 
@@ -54,6 +55,10 @@ function Banner ({title, cover}){
             </BannerWrapper>
         </BannerContainer>
     )
+}
+Banner.propTypes = {
+    title: PropTypes.string,
+    cover: PropTypes.string.isRequired,
 }
 
 export default Banner;
