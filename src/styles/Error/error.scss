@@ -1,0 +1,39 @@
+
+.errorMain{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: $primary;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    @media (min-width: 992px){
+        height: auto;
+    }
+    .errorTitle{
+        font-size: 150px;
+        margin-bottom: 0;
+        margin-top: 0;
+        @media (min-width: 992px){
+            font-size: 288px; 
+            margin-top: 50px;  
+        }
+    }
+    .errorSubstitle{
+        font-size: 18px;
+        margin-bottom: 60px;
+        @media (min-width: 992px){
+            font-size: 36px; 
+        }
+    }
+    .errorLink{
+        color: $primary;
+        font-size: 14px;
+        margin-bottom: 20%;
+        @media (min-width: 992px){
+            font-size: 18px;
+            margin-bottom: 100px;           
+        }
+    }     
+}
+

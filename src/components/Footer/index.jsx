@@ -14,6 +14,7 @@ const FooterContainer = styled.footer`
     padding: 20px;
     background-color: #000000;
     color: white;
+    max-width: 100%;
 `
 
 

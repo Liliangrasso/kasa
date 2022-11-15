@@ -4,7 +4,6 @@
 import styled from "styled-components";
 import PropTypes from 'prop-types'
 import { useState } from "react";
-import '../../styles/Collapse/styles.css'
 import colors from "../../utils/colors/color";
 import { FaChevronDown } from 'react-icons/fa';
 import { FaChevronUp } from 'react-icons/fa';
@@ -86,7 +85,7 @@ function Collapse({title, description} ){
 
 Collapse.propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string,
+    description: PropTypes.string.isRequired,
 }
 Collapse.defaultProps = {
         title: 'Mon titre par défaut',
