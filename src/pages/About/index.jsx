@@ -2,7 +2,7 @@
 /* Import */
 
 import Banner from "../../components/Banner";
-import Collapse from "../../components/Collapse/index"
+import Collapse from "../../components/Collapse"
 import styled from "styled-components";
 
 /* Styles */

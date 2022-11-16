@@ -4,8 +4,10 @@
 
 // Composants
 @import './Collapse/collapse.scss';
+@import './Slider/slider.scss';
 // Pages
 @import './Error/error.scss';
+@import './Rentals/rentals.scss';
 
 html, body, #root{
     height: 100%;
