@@ -12,7 +12,7 @@ import { FaChevronUp } from 'react-icons/fa';
 /* Styles */
 
 const CollapseContainer = styled.div`
-    width: 90%;
+    width: 98%;
     margin: auto;
     @media (min-width: 992px){
         width: 70%;
@@ -27,32 +27,32 @@ const Item = styled.div`
 const TitleContainer = styled.div`
     display: flex;
     align-items: center;
+    height: 40px;
     background-color: #FF6060;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 10px;
     cursor: pointer;
+    justify-content: space-between;
 `
 const ItemTitle = styled.p`
     color: white;
 `
 const SignTitle = styled.span`
-    position: absolute;
-    right: 17%;
     font-size: 25px;
     color: white;
     @media (max-width: 992px){
         right: 10%;
     }
 `
-const ItemDescription = styled.p`
+const ItemDescription = styled.div`
     color: ${colors.primary};
     text-align: left;
-    margin-left: 15px;
+    margin: 15px;
 `
 const DescriptionContainer = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
 `
 
@@ -67,11 +67,11 @@ function Collapse({title, description} ){
         setActive(!active)
     }
     return (
-        <CollapseContainer>
+        <CollapseContainer className="collapseContainer">
                 <Item >
                     <TitleContainer  onClick={toggle}>
                         <ItemTitle>{title}</ItemTitle>
-                        <SignTitle>{active ? <FaChevronDown/> : <FaChevronUp /> }</SignTitle>                           
+                        <SignTitle>{active ? <FaChevronUp /> : <FaChevronDown/> }</SignTitle>                           
                     </TitleContainer>
                     <DescriptionContainer>
                         <ItemDescription className={active ? 'descriptionOpen' : 'descriptionClose'}>{description}</ItemDescription>
@@ -85,7 +85,6 @@ function Collapse({title, description} ){
 
 Collapse.propTypes = {
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
 }
 Collapse.defaultProps = {
         title: 'Mon titre par défaut',
