@@ -6,6 +6,7 @@ import {Link} from "react-router-dom"
 import {ReactComponent as Logo} from '../../logo.svg'
 import styled from 'styled-components'
 import colors from "../../utils/colors/color";
+import { useLocation } from "react-router-dom";
 
 /* Styles */
 
@@ -28,14 +29,33 @@ const NavContainer = styled.nav`
     right: 20px
 `
 
+/* Liens */
+const LINKS = [
+    { name: "Acceuil", path: "/" },
+    { name: "A Propos", path: "/about" },
+]
 
 function Navbar(){
+
+    // Récupération de la location
+    let location = useLocation();
+    
     return (
         <HeaderContainer>
             <Logo className="logoNav" />
             <NavContainer>
-                <StyledLink to="/">Home</StyledLink>
-                <StyledLink to="/about">About</StyledLink>
+                {LINKS.map((link) => (
+                    <StyledLink 
+                        key={link.name}
+                        to={link.path}
+                        style={{
+                            textDecoration:
+                                link.path === location.pathname ? "underline" : "none",
+                        }}
+                    >
+                        {link.name}
+                    </StyledLink>
+                ))}
             </NavContainer>
         </HeaderContainer>
     )
