@@ -1,18 +1,18 @@
 /* Import */
 
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route} from "react-router-dom";
 
 /* Pages */
 
 import Home from './Home/Home';
 import About from './About/index';
 import Rentals from './Rentals/index';
-import Error from './Error/index'
+import Error from './Error/index';
 
 /* Components */
 
 import Navbar from '../components/Navbar/index';
-import Footer from '../components/Footer/index'
+import Footer from '../components/Footer/index';
 
 
 function App() {

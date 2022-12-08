@@ -3,9 +3,10 @@
 import styled from 'styled-components'
 import { useState } from "react";
 
+/* Icons */
+
 import { FaChevronLeft } from 'react-icons/fa';
 import { FaChevronRight } from 'react-icons/fa';
-import PropTypes from 'prop-types';
 
 /* Styles */
 
@@ -66,12 +67,12 @@ function Slider ({slides}){
     const back = () => {
         const firstSlide = currentIndex === 0;
         const newIndex = firstSlide ? slides.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex)
+        setCurrentIndex(newIndex);
     }
     const next = () => {
         const lastSlide = currentIndex === slides.length - 1;
         const newIndex = lastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex)
+        setCurrentIndex(newIndex);
     }
 
     // Compteur

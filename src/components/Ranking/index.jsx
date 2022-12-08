@@ -2,6 +2,9 @@
 
 import star from '../../img/star.svg'
 import fullStar from '../../img/fullStar.svg'
+
+/* Composant */
+
 import styled from "styled-components";
 
 /* Styles */

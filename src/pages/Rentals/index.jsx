@@ -4,6 +4,8 @@ import Slider from "../../components/Slider/index"
 import { useParams } from "react-router-dom";
 import data from '../../utils/data/data.json'
 
+/* Composants */
+
 import Ranking from '../../components/Ranking'
 import Owner from "../../components/Owner";
 import Collapse from "../../components/Collapse"
@@ -11,12 +13,15 @@ import Collapse from "../../components/Collapse"
 
 function Rentals(){
 
+    // Récupération de l'id
     const { id } = useParams();
     try{
+        // Vérification de l'id
         const getRentals = data.find((object) => object.id === id)
+        // Récupération des slides et des tags
         const slidePictures = getRentals.pictures;
         const tags = getRentals.tags;
-    
+        // Récupération et affichage des équipements
         const equipments = getRentals.equipments.map((equipment, index) =>(
             <p key={index}>
                 {equipment}
@@ -60,6 +65,7 @@ function Rentals(){
             </main>
         )
     }
+    // Redirection sur la page 404 en cas d'erreur
     catch(err){
         window.location.href ="/404";
     }
