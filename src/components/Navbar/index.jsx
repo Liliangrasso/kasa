@@ -38,6 +38,7 @@ const NavContainer = styled.nav`
     justify-content: flex-end;
 `
 const NavLogo = styled.img`
+    margin-bottom: 2%;
     @media (max-device-width: 375px) {
         max-width: 130px;
     }
