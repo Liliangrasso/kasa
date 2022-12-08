@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Grasso Lilian : Créez une application web de location immobilière avec React
+[![forthebadge](https://forthebadge.com/images/badges/uses-html.svg)](https://developer.mozilla.org/fr/docs/Web/HTML)  [![forthebadge](https://forthebadge.com/images/badges/uses-css.svg)](https://developer.mozilla.org/fr/docs/Web/CSS) [![forthebadge](https://forthebadge.com/images/badges/uses-git.svg)](https://github.com/)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Pour commencer
 
-## Available Scripts
+### Contrainte technique
 
-In the project directory, you can run:
+<ul>
+  <li>Découpage en composants modulaires et réutilisables</li>
+  <li>Un composant par fichier</li>
+  <li>Structure logique des différents fichiers</li>
+  <li>Utilisation des props entre les composants</li>
+  <li>Utilisation du state dans les composants quand c'est nécessaire</li>
+  <li>Gestion des événements</li>
+  <li>Listes : React permet de faire des choses vraiment intéressantes avec
+    les listes, en itérant dessus, par exemple avec map. Il faut les utiliser
+    autant que possible</li>
+</ul>
 
-### `npm start`
+### Technologies à utiliser
+<ul>
+  <li>React</li>
+  <li>React Router</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Lancement de l'application
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Avec Node
 
-### `npm test`
+<p>Ouvrez le dossier Kasa avec la console</p>
+<p>Puis tapez npm start</p>
+<p>L'application devrait s'ouvrir dans votre moteur de recherche</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Sans Node
 
-### `npm run build`
+<p>Pour installer node rendez-vous sur https://nodejs.org/en/download/ </p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Outils utilisés 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* [Virtual studio code](https://code.visualstudio.com/) - Editeur de textes
+* [GitMoji](https://gitmoji.dev/) - Emoji pour les commits
+* [Forthebadge](https://forthebadge.com/) - Pour les badges
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Code Gitmoji
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+:construction_worker: Architecture du projet</br>
+:pencil: Mise à jour d'un document</br>
+:art: Pour le CSS</br>
+:hammer: Pour le JS </br>
+:lock: Pour la sécuritée
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Auteur
+* **Grasso Lilian** _alias_ [@liliangrasso](https://github.com/Liliangrasso)
