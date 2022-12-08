@@ -10,9 +10,8 @@ const BannerContainer = styled.aside`
     height: 120px;
     max-width: 91%;
     margin: 1% auto;
-    @media (min-width: 768px){
-        height: 220px;
-    }
+    height: 220px;
+    margin-bottom: 5%;
     @media (min-width: 912px){
         margin: 2% auto;
     }
@@ -42,7 +41,11 @@ const Cover = styled.img`
     background-size: cover;
     background-position: center;
     width: 100%;
-    border-radius: 25px    
+    border-radius: 10px;
+    filter : brightness(80%);
+    @media (min-width: 992px){
+        border-radius: 25px;
+    }    
 `
 
 function Banner ({title, cover}){
