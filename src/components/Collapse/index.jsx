@@ -1,8 +1,7 @@
-
 /* Import */
 
 import styled from "styled-components";
-import PropTypes from 'prop-types'
+import PropTypes, { nominalTypeHack } from 'prop-types'
 import { useState } from "react";
 import colors from "../../utils/colors/color";
 import { FaChevronDown } from 'react-icons/fa';
@@ -20,7 +19,6 @@ const CollapseContainer = styled.div`
 `
 const Item = styled.div`
     background-color: #F6F6F6;
-    border-radius: 10px;
     margin-bottom: 20px;
 `
 
