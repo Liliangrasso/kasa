@@ -2,8 +2,8 @@
 /* Import */
 
 import React from "react";
-import {Link} from "react-router-dom"
-import {ReactComponent as Logo} from '../../logo.svg'
+import {Link} from "react-router-dom";
+import Logo from '../../logo.svg';
 import styled from 'styled-components'
 import colors from "../../utils/colors/color";
 import { useLocation } from "react-router-dom";
@@ -11,9 +11,17 @@ import { useLocation } from "react-router-dom";
 /* Styles */
 
 const HeaderContainer = styled.header`
-    padding: 20px;
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-top: 2%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    @media (min-width: 1200px){
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    
 `
 const StyledLink = styled(Link)`
     padding: 10px;
@@ -25,8 +33,17 @@ const StyledLink = styled(Link)`
     }
 `
 const NavContainer = styled.nav`
-    position: absolute;
-    right: 20px
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+`
+const NavLogo = styled.img`
+    @media (max-device-width: 375px) {
+        max-width: 130px;
+    }
+    @media (max-width: 600px){
+        max-width: 160px;
+    }
 `
 
 /* Liens */
@@ -42,7 +59,7 @@ function Navbar(){
     
     return (
         <HeaderContainer>
-            <Logo className="logoNav" />
+            <NavLogo src={Logo} />
             <NavContainer>
                 {LINKS.map((link) => (
                     <StyledLink 
