@@ -1,8 +1,8 @@
 /* Import */
 
 import React from "react";
-import styled from 'styled-components'
-import {ReactComponent as Logo} from '../../logo.svg'
+import styled from 'styled-components';
+import Logo from '../../logo.svg';
 
 /* Styles */
 
@@ -16,12 +16,16 @@ const FooterContainer = styled.footer`
     color: white;
     max-width: 100%;
 `
+const FooterLogo = styled.img`
+    height: 40px;
+    filter:brightness(10);
+`
 
-
+//<Logo className="logoFooter" />
 function Footer(){
     return (
         <FooterContainer>
-            <Logo className="logoFooter" />
+            <FooterLogo src={Logo} />
             <p>© 2020 Kasa. All rights reserved</p>
         </FooterContainer>
     )
