@@ -2,8 +2,9 @@
 /* Import */
 
 import Banner from "../../components/Banner";
-import Collapse from "../../components/Collapse"
+import Collapse from "../../components/Collapse";
 import styled from "styled-components";
+import aboutCover from "./AboutSlide.png";
 
 /* Styles */
 
@@ -15,10 +16,11 @@ const CollapseWrapper = styled.div`
     justify-content: center;
     flex-direction: column;
 `
+
 function About(){
     return (
         <AboutMain>
-            <Banner cover="https://zupimages.net/up/22/45/hi8g.jpg" />
+            <Banner cover={aboutCover} />
             <CollapseWrapper>
                 {aboutData.map((item, i) => (
                     <Collapse key={item.id} title={item.title} description={item.description}/>

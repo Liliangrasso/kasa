@@ -1,11 +1,15 @@
 /* Import */
 
 import styled from "styled-components";
-import Banner from "../../components/Banner";
-import Card from "../../components/Card/index"
 import { Link } from "react-router-dom";
 import data from "../../utils/data/data.json"
 import colors from "../../utils/colors/color";
+import bannerImg from "./banner.svg";
+
+/* Composants */
+
+import Banner from "../../components/Banner";
+import Card from "../../components/Card/index"
 
 /* Styles */ 
 
@@ -36,17 +40,17 @@ const CardContainer = styled.div`
 function Home (){
     return (
         <main>
-        <Banner title="Chez vous, partout et ailleurs" cover="https://zupimages.net/up/22/45/c3hp.jpg" />
-        <CardContainer>
-        {data.map((rental, id) =>(
-            <div key={id}>
-                <Link to={`/rentals/${rental.id}`}>
-                    <Card cover={rental.cover} title={rental.title} />
-                </Link>
-            </div>
+            <Banner title="Chez vous, partout et ailleurs" cover={bannerImg} />
+            <CardContainer>
+            {data.map((rental, id) =>(
+                <div key={id}>
+                    <Link to={`/rentals/${rental.id}`}>
+                        <Card cover={rental.cover} title={rental.title} />
+                    </Link>
+                </div>
 
-        ))}
-        </CardContainer>
+            ))}
+            </CardContainer>
         </main>
     )
 }
