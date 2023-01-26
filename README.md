@@ -29,7 +29,9 @@
 ## Avec Node
 
 <p>Ouvrez le dossier Kasa avec la console</p>
-<p>Puis tapez npm start</p>
+<p>Installer Yarn si ça n'est pas fait</p>
+<p>Pour installer yarn rendez-vous sur https://classic.yarnpkg.com/en/docs/getting-started </p>
+<p>Tapez yarn start dans la console</p>
 <p>L'application devrait s'ouvrir dans votre moteur de recherche</p>
 
 ## Sans Node
