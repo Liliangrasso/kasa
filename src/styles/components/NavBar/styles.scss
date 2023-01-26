@@ -1,0 +1,39 @@
+
+.headerContainer{
+    padding-right: 4%;
+    padding-left: 4%;
+    padding-top: 2%;
+    display: flex;
+    @media (min-width: 1200px){
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    .navContainer{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        .navLogo{
+            margin-bottom: 2%;
+            @media (max-device-width: 375px) {
+                max-width: 130px;
+            }
+            @media (max-width: 600px){
+                max-width: 160px;
+            }
+        }
+        .linkContainer{
+            align-items: center;
+            display: flex;
+            a{
+                padding: 10px;
+                color: #FF6060;
+                text-decoration: none;
+                font-size: 19px;
+                @media (min-width: 450px){
+                    font-size: 20px; 
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+.descriptionOpen{
+    display: block;
+    p{
+        margin: 5px;
+    }
+}
+
+.descriptionClose{
+    display: none;
+}
+
+.collapseContainer{
+    width: 98%;
+    margin: auto;
+    @media (min-width: 992px){
+        width: 70%;
+    }
+    .collapseItem{
+        background-color: #F6F6F6;
+        margin-bottom: 20px;
+        .collapseTitleContainer{
+            display: flex;
+            align-items: center;
+            height: 40px;
+            background-color: #FF6060;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            justify-content: space-between;
+            .collapseTitle{
+                color: white;
+            }
+            .collapseSign{
+                font-size: 25px;
+                color: white;
+                @media (max-width: 992px){
+                    right: 10%;
+                }
+            }
+        }
+        .collapseDescriptionContainer{
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            p, div{
+                color:#FF6060;
+                text-align: left;
+                margin: 15px;               
+            }
+        }
+    }
+}

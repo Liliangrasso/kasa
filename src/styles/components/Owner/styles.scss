@@ -1,0 +1,16 @@
+
+.ownerWrapper{
+    display: flex;
+    align-items: center;
+    .ownerName{
+        color: #FF6060;
+    }
+    .ownerPicture{
+        border-radius: 50%;
+        height: 64px;
+        margin-left: 1%;
+        @media (min-width: 992px){
+            height: 88px;
+        }
+    }
+}

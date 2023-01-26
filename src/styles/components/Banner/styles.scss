@@ -1,0 +1,41 @@
+
+.bannerContainer{
+    height: 120px;
+    max-width: 91%;
+    margin: 1% auto;
+    height: 220px;
+    margin-bottom: 5%;
+    @media (min-width: 912px){
+        margin: 2% auto;
+    }
+    @media (min-width: 1400px){
+        height: 300px;
+        width: 90%;
+    }
+    .bannerWrapper{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        .cover{
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            border-radius: 10px;
+            filter : brightness(80%);
+            @media (min-width: 992px){
+                border-radius: 25px;
+            }  
+        }
+        .bannerTitle{
+            position: absolute;
+            align-self: center;
+            margin: 25px;
+            overflow: hidden;
+            color: white;
+            @media (min-width: 992px){
+                font-size: 42px;
+            }
+        }
+    }
+}

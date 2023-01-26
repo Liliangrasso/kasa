@@ -3,30 +3,18 @@
 
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
-import styled from "styled-components";
 import aboutCover from "./AboutSlide.png";
-
-/* Styles */
-
-const AboutMain = styled.main`
-    height: 100%;
-`
-const CollapseWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-`
 
 function About(){
     return (
-        <AboutMain>
+        <main>
             <Banner cover={aboutCover} />
-            <CollapseWrapper>
+            <div className="aboutCollapseWrapper">
                 {aboutData.map((item, i) => (
                     <Collapse key={item.id} title={item.title} description={item.description}/>
                 ))}          
-            </CollapseWrapper>
-        </AboutMain>
+            </div>
+        </main>
     )
 }
 

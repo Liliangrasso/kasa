@@ -3,11 +3,17 @@
 @import './Import/variables.scss';
 
 // Composants
-@import './Collapse/collapse.scss';
-@import './Slider/slider.scss';
+@import './components/NavBar/styles.scss';
+@import './components/Banner/styles.scss';
+@import './components/Card/styles.scss';
+@import './components/Collapse/collapse.scss';
+@import './components/Slider/slider.scss';
+@import './components/Owner/styles.scss';
+@import './components/Footer/styles.scss';
 // Pages
-@import './Error/error.scss';
-@import './Rentals/rentals.scss';
+@import './pages/Home/styles.scss';
+@import './pages/Error/error.scss';
+@import './pages/Rentals/rentals.scss';
 
 html, body, #root{
     height: 100%;

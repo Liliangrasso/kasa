@@ -1,0 +1,25 @@
+
+.cardsContainer{
+    display: flex;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 98%;
+    @media (min-width: 768px){
+        margin-top: 60px;
+    }
+        @media (min-width: 1260px){
+            width: 91%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            gap: 2em;
+            background-color: #F6F6F6;
+            border-radius: 25px 25px 0px 25px;
+            }
+            @media (min-width: 1400px){
+                padding-top: 80px;
+                padding-bottom: 80px;
+                gap: 80px;
+                } 
+}
