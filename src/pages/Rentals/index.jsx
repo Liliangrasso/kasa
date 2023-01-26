@@ -1,11 +1,11 @@
 /* Import */
 
-import Slider from "../../components/Slider/index"
 import { useParams } from "react-router-dom";
 import data from '../../utils/data/data.json'
 
 /* Composants */
 
+import Slider from "../../components/Slider/index"
 import Ranking from '../../components/Ranking'
 import Owner from "../../components/Owner";
 import Collapse from "../../components/Collapse"
@@ -18,9 +18,10 @@ function Rentals(){
     try{
         // Vérification de l'id
         const getRentals = data.find((object) => object.id === id)
-        // Récupération des slides et des tags
-        const slidePictures = getRentals.pictures;
+        
+        // Récupération des tags
         const tags = getRentals.tags;
+        
         // Récupération et affichage des équipements
         const equipments = getRentals.equipments.map((equipment, index) =>(
             <p key={index}>
@@ -31,7 +32,7 @@ function Rentals(){
         return (
             <main className="rentalsContainer"  key={ id }>
                 <section className="sliderContainer">
-                    <Slider className="slider" slides={slidePictures} />  
+                    <Slider className="slider" slides={getRentals} />  
                 </section>
                 <section className="infoContainer">
                     <div className="titleTagContainer">

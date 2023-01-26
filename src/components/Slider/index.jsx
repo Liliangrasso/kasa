@@ -5,28 +5,10 @@ import { useState } from "react";
 
 /* Icons */
 
-import { FaChevronLeft } from 'react-icons/fa';
-import { FaChevronRight } from 'react-icons/fa';
 
-/* Styles */
+import FaChevronLeft from '../../img/arrowleft.svg';
+import FaChevronRight from '../../img/arrowright.svg';
 
-// Slides styles
-const SlidesContainer = styled.div`
-    height: 100%;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-`
-
-const SlidesImg = styled.img`
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
-    min-width: 100%;
-    background-position: center;
-    object-fit: cover;
-    border-radius: 25px;
-`
 // Navigation styles
 const ArrowLeft = styled.div`
     position: absolute;
@@ -48,60 +30,57 @@ const ArrowRight = styled.div`
     z-index: 1;
     cursor: pointer;
 `
-// Counter styles
-
-const CounterContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    position: relative;
-    bottom: 50px;
-    font-size: 18px;
-    color: white;
-`
 function Slider ({slides}){
 
-    // Stockage de l'état
-    const [currentIndex, setCurrentIndex] = useState(0);
+    //Stockage de l'état
+    const [currentPicture, setCurrentPicture] = useState(0);
 
-    // Navigation
-    const back = () => {
-        const firstSlide = currentIndex === 0;
-        const newIndex = firstSlide ? slides.length - 1 : currentIndex - 1;
-        setCurrentIndex(newIndex);
-    }
+    //Navigation
     const next = () => {
-        const lastSlide = currentIndex === slides.length - 1;
-        const newIndex = lastSlide ? 0 : currentIndex + 1;
-        setCurrentIndex(newIndex);
-    }
-
-    // Compteur
-    const counter = currentIndex + 1;
-    const counterLength = slides.length;
+      if (currentPicture + 1 >= slides.pictures.length) {
+        setCurrentPicture(0);
+      } else {
+        setCurrentPicture(currentPicture + 1);
+      }
+    };
+  
+    const prev = () => {
+      if (currentPicture + 1 <= 1) {
+        setCurrentPicture(slides.pictures.length - 1);
+      } else {
+        setCurrentPicture(currentPicture - 1);
+      }
+    };
 
     return(
-        <SlidesContainer>
-            {counterLength > 1 &&(
-                <ArrowLeft onClick={back}><FaChevronLeft /></ArrowLeft>
-            )}
-            {counterLength > 1 &&(
-                <ArrowRight onClick={next}><FaChevronRight /></ArrowRight>
-            )}
-			{slides.map((slide, index) => (
-				<div
-					key={index}
-					className={currentIndex === index ? "slideWrapper" : null}
-				>
-					{index === currentIndex && <SlidesImg src={slide} alt="Location illustration(s)" />}
-					{index === currentIndex && (
-						<CounterContainer className="active-anim">
-                            {counter}/{counterLength}
-                        </CounterContainer>
-					)}
-				</div>
-
-			))}
-        </SlidesContainer>
+        <div className='slidesContainer'>
+            <div className="carrouselPictures">
+                <img src={slides.pictures[currentPicture]} alt="slide"/>
+            </div>
+            {slides.pictures.length > 2 && (
+                <>
+                <div className="carrouselNavigation">
+                    <div className="navigationLeft">
+                        <img
+                            src={ FaChevronLeft }
+                            alt="Navigation vers la gauche"
+                            onClick={prev}
+                        />
+                    </div>
+                    <div className="navigationRight">
+                        <img
+                            src={ FaChevronRight }
+                            alt="Navigation vers la droite"
+                            onClick={next}
+                        />
+                    </div>
+                </div>
+          <div className="counter">
+            {currentPicture + 1}/{slides.pictures.length}
+          </div>
+        </>
+      )}
+        </div>
     )
 }
 
